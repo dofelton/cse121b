@@ -54,10 +54,11 @@ myProfile.hobbies.forEach(hobby => {
 const places = document.getElementById('places-lived');
 myProfile.placesLived.forEach(place => {
     let placeList = document.createElement('dt');
-    placeList.textContent = place.name;
+    placeList.textContent = place.place;
     let lengthList = document.createElement('dd');
     lengthList.textContent = place.length;
-    places.appendChild(placeList, lengthList);
+    places.appendChild(placeList);
+    places.appendChild(lengthList);
     // easier or better to add as concatenation??? 
     // places = `${placeList}, ${lengthList}`
 })
