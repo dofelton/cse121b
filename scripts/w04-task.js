@@ -63,3 +63,4 @@ myProfile.placesLived.forEach(place => {
 })
 // places.innerHTML = places;
 
+
