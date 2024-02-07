@@ -7,7 +7,7 @@ let myProfile = {
     favoriteFoods: [
         'Cookies',
         'Milk Shakes',
-        'Ribeye Steakes',
+        'Ribeye Steaks',
         'Pie'
     ],
     hobbies: [
@@ -20,16 +20,11 @@ let myProfile = {
     
 };
 
-
 /* Populate Profile Object with placesLive objects */
 
-let placeObjectOne = {place: 'Rowlett, TX', length: '20 years'};
-myProfile.placesLived.push(placeObjectOne);
-let placeObjectTwo = {place: 'Providence, RI', length: '3 years'};
-myProfile.placesLived.push(placeObjectTwo);
-let placeObjectThree = {place: 'Garland, TX', length: '2 years'}
-myProfile.placesLived.push(placeObjectThree);
-
+myProfile.placesLived.push({place: 'Rowlett, TX', length: '20 years'});
+myProfile.placesLived.push({place: 'Providence, RI', length: '3 years'});
+myProfile.placesLived.push({place: 'Garland, TX', length: '2 years'});
 
 /* DOM Manipulation - Output */
 
@@ -66,4 +61,5 @@ myProfile.placesLived.forEach(place => {
     // easier or better to add as concatenation??? 
     // places = `${placeList}, ${lengthList}`
 })
+// places.innerHTML = places;
 
