@@ -39,28 +39,33 @@ const divideNumbers = () => document.querySelector('#quotient').value = divide(N
 document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
 
 /* Decision Structure */
-function getTotal() {
-    const subtotal = document.getElementById("#subtotal");
-    const memeber = document.getElementById('#member').checked;
-    if (member) {
-        let total = subtotal * 0.8;
-    } else { let total = subtotal; }
-    return `${total}`
-}
-GetTotalDue.addEventListener("click", getTotal );
+const total = (num) => num * 0.8;
+const getTotal = () => document.querySelector('#total').value = total(Number(document.querySelector('#subtotal').value));
+document.querySelector('#total').addEventListener("click", getTotal);
+
+
+// function getTotal() {
+//     const subtotal = document.getElementById("#subtotal").value;
+//     const memeber = document.getElementById('#member').value;
+//         if (member === "on") {
+//             let total = subtotal * 0.8;
+//         } else { let total = subtotal; }
+//         return `${total}`
+// }
+// document.querySelector('#total').addEventListener("click", getTotal);
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-document.getElementById('array').innerHTML = numbers;
+document.getElementById('array').textContent = numbers;
 /* Output Odds Only Array */
 let oddArray = numbers.filter(number => number % 2 !== 0);
-document.getElementById('odds').textHTML = oddArray
+document.getElementById('odds').textContent = oddArray
 /* Output Evens Only Array */
-document.getElementById('evens').textHTML = numbers.filter(number => number % 2 === 0);
+document.getElementById('evens').textContent = numbers.filter(number => number % 2 === 0);
 /* Output Sum of Org. Array */
-document.getElementById('sumOfArray') = numbers.reduce((sum, number) => sum + number);
+document.getElementById('sumOfArray').textContent = numbers.reduce((sum, number) => sum + number);
 /* Output Multiplied by 2 Array */
-document.getElementById('multiplied') = numbers.map(number => number * 2);
+document.getElementById('multiplied').textContent = numbers.map(number => number * 2);
 /* Output Sum of Multiplied by 2 Array */
-document.getElementById('sumOfMultiplied') = numbers.map(number => number * 2).reduce((sum, number) => sum + number );
+document.getElementById('sumOfMultiplied').textContent = numbers.map(number => number * 2).reduce((sum, number) => sum + number );
