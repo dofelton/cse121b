@@ -39,20 +39,19 @@ const divideNumbers = () => document.querySelector('#quotient').value = divide(N
 document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
 
 /* Decision Structure */
-const total = (num) => num * 0.8;
-const getTotal = () => document.querySelector('#total').value = total(Number(document.querySelector('#subtotal').value));
-document.querySelector('#total').addEventListener("click", getTotal);
-
-
-// function getTotal() {
-//     const subtotal = document.getElementById("#subtotal").value;
-//     const memeber = document.getElementById('#member').value;
-//         if (member === "on") {
-//             let total = subtotal * 0.8;
-//         } else { let total = subtotal; }
-//         return `${total}`
-// }
+// const total = (num) => num * 0.8;
+// const getTotal = () => document.querySelector('#total').value = total(Number(document.querySelector('#subtotal').value));
 // document.querySelector('#total').addEventListener("click", getTotal);
+
+
+function getTotal() {
+    let subtotal = parseFloat(document.querySelector("#subtotal").value);
+        if (document.querySelector('#member').checked) {
+            subtotal = subtotal * 0.8;
+        }
+    document.querySelector('#total').textContent = `$${subtotal.toFixed(2)}`;
+}
+document.querySelector('#getTotal').addEventListener("click", getTotal);
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
