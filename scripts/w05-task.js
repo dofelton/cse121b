@@ -17,7 +17,7 @@ const getTemples = async () => {
 
 /* async displayTemples Function */
 const displayTemples = (temples) => {
-    templeList.foreach(function (temple) {
+    temples.foreach(function (temple) {
         let article = document.createElement('article');
         let newh3 = document.createElement('h3');
         newh3.textContent = temple.templeName;
