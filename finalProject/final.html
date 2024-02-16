@@ -6,13 +6,23 @@
     <link rel="stylesheet" href="finalStyling.css">
     <title>CSE112b Final Project- Grocery list</title>
 </head>
-<body>
+<header>
     <h1>Pizza Shopping List</h1>
+</header>
+<body>
     <main>
         <label for="recipe">Which Pizza Would You Like To Make</label>
-        <input type="text" id="recipe" placeholder="Classic">
-        <button type="submit">Get Ingredient List</button>
-        <ul id="list"></ul>
+        <div>
+            <section>
+                <h2>Choose from one of these</h2>
+                <ul id="choices"></ul>
+            </section>
+            <section id="ingredients">
+                <input type="text" id="recipe" placeholder="Classic">
+                <button type="submit">Get Ingredient List</button>
+                <ul id="list"></ul>
+            </section>
+        </div>
     </main>
     <script src="final.js"></script>
 </body>

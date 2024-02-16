@@ -1,3 +1,8 @@
+header {
+    border: 2px groove black;
+    font-size: medium;
+}
+
 body {
     height: 100px;
     display: flex;
@@ -8,18 +13,34 @@ body {
 
 h1 {
     font-size: 2rem;
+    text-align: center;
 }
 
 main {
     border: 2px groove red;
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.007);
+    background-color: rgba(233, 94, 94, 0.712);
 }
 
+div {
+    display: flex;
+    border: 2px groove green;
+    margin: 2 rem;
+}
+
+section {
+    border: 2px groove green;
+    width: 30em;
+}
 input, button {
     padding: 5px;
     margin: 5px;
 }
 
-
+li {
+    list-style: none;
+}
+h2 {
+    font-size: xx-small;
+}
 
