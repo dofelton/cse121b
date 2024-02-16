@@ -1,6 +1,9 @@
 header {
     border: 2px groove black;
+    padding: 3rem;
+    margin: 3rem;
     font-size: medium;
+    text-align: center;
 }
 
 body {
