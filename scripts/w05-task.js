@@ -22,7 +22,7 @@ const displayTemples = (temples) => {
         let newh3 = document.createElement('h3');
         newh3.textContent = temple.templeName;
         let templeImage = document.createElement('img');
-        templeImage.src = temple.imgUrl;
+        templeImage.src = temple.imageUrl;
         templeImage.alt = temple.location;
         article.appendChild(newh3);
         article.appendChild(templeImage);
@@ -41,15 +41,18 @@ function filterTemples(temples) {
     reset();
     let filter = document.querySelector('#filtered').value;
     switch (filter) {
-        case "Utah":
+        case "utah":
             displayTemples(temples.filter(temple => temple.location.includes('Utah')));
             break;
-        case "notUtah":
+        case "notutah":
             displayTemples(temples.filter(temple => !temple.location.includes('Utah')));
+            break;
         case 'older':
             displayTemples(temples.filter(temple => Date.parse(temple.dedicated)< new Date(1950, 0, 1)));
+            break;
         case 'all':
-            displayTemples(temples);    }
+            displayTemples(temples);
+            break;    }
 }
 
 getTemples();
