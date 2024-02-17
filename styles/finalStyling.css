@@ -1,13 +1,12 @@
 header {
     border: 2px groove black;
-    padding: 3rem;
-    margin: 3rem;
+    padding: 1rem;
+    margin: 1rem;
     font-size: medium;
     text-align: center;
 }
 
 body {
-    height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,24 +19,25 @@ h1 {
 }
 
 main {
-    border: 2px groove red;
+    border: 1px solid red;
     padding: 1rem;
-    background-color: rgba(233, 94, 94, 0.712);
+    /* background-color: rgba(233, 94, 94, 0.712); */
 }
 
 div {
     display: flex;
-    border: 2px groove green;
-    margin: 2 rem;
+    padding 1rem;
+    border: 1px solid green;
+    margin: 1rem;
 }
 
 section {
-    border: 2px groove green;
-    width: 30em;
+    border: 1px solid green;
+    padding: 1rem;
 }
 input, button {
-    padding: 5px;
-    margin: 5px;
+    padding: 1rem;
+    margin: 1rem;
 }
 
 li {
